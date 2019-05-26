@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    xss (0.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    power_assert (1.1.4)
+    rake (12.3.2)
+    rake-compiler (1.0.7)
+      rake
+    test-unit (3.3.3)
+      power_assert
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  rake-compiler
+  test-unit
+  xss!
+
+BUNDLED WITH
+   2.0.1
