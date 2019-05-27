@@ -20,32 +20,12 @@ before_install:
       rvm: 2.3.4
     - name: "2.4"
       rvm: 2.4.2
-    - name: "2.4 + frozen string literal"
-      rvm: 2.4.2
-      env: TEST_RUBYOPT=--enable-frozen-string-literal
-    - name: "2.5"
-      rvm: 2.5.3
-    - name: "2.5 + frozen string literal"
-      rvm: 2.5.3
-      env: TEST_RUBYOPT=--enable-frozen-string-literal
-    - name: "2.6"
-      rvm: 2.6
-    - name: "2.6 + frozen string literal"
-      rvm: 2.6
-      env: TEST_RUBYOPT=--enable-frozen-string-literal
-    - name: "trunk"
-      rvm: ruby-head
-    - name: "trunk + frozen string literal"
-      rvm: ruby-head
-      env: TEST_RUBYOPT=--enable-frozen-string-literal
-    - name: "JRuby"
-      rvm: jruby
   allow_failures:
     - name: "JRuby"
       rvm: jruby
   fast_finish: true
 script:
-  - RUBYOPT="$RUBYOPT $TEST_RUBYOPT" bundle exec rake
+  - xss="$Xss $TEST_Xss" bundle exec rake
 deploy:
   provider: anynines
   username: sgframework
