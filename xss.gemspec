@@ -1,7 +1,7 @@
   Gem::Specification.new do |s|
     s.name        = 'xss'
-    s.version     = '0.0.1'
-    s.date        = '2019-05-26'
+    s.version     = '0.0.3'
+    s.date        = '2019-05-27'
     s.summary     = "xSGDC!"
     s.description = "A gem to control the world!"
     s.authors     = ["0x000001"]
