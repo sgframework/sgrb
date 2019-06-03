@@ -1,5 +1,5 @@
-class MyMalloc
-    VERSION = "0.0.3"
+class getVersion
+    VERSION = "0.1.3"
   end
   
-  require "my_malloc/my_malloc"
+  require "specs/specs"

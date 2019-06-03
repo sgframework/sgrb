@@ -1,23 +1,6 @@
-require "bundler/gem_tasks"
-require "rake/testtask"
-require "rake/clean"
-require "rake/extensiontask"
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-Rake::ExtensionTask.new "specs" do |ext|
-  ext.lib_dir = "lib/specs"
-end
+require_relative 'config/application'
 
-
-Rake::TestTask.new(:test) do |t|
-  t.libs << "test"
-  t.libs << "lib"
-  t.libs << "bin"
-  t.test_files = FileList['bin/*.rb']
-end
-
-
-
-require 'rake/extensiontask'
-Rake::ExtensionTask.new("sgrb")
-
-task :default => [:compile, :test]
+Rails.application.load_tasks

@@ -1,37 +1,6 @@
 language: ruby
-# To use rbx environment.
-dist: trusty
-sudo: false
-cache:
-  - bundler
-before_install:
-  - gem update bundler
-  matrix:
-  include:
-    - name: "1.9"
-      rvm: 1.9.3
-    - name: "2.0"
-      rvm: 2.0.0
-    - name: "2.1"
-      rvm: 2.1
-    - name: "2.2"
-      rvm: 2.2
-    - name: "2.3"
-      rvm: 2.3.4
-    - name: "2.4"
-      rvm: 2.4.2
-  allow_failures:
-    - name: "JRuby"
-      rvm: jruby
-  fast_finish: true
-script:
-  - xss="$Xss $TEST_Xss" bundle exec rake
-deploy:
-  provider: anynines
-  username: sgframework
-  password:
-    secure: K2mxNvoVTLyCkv1OkyYkX/tq5cRzfclitDkAj2vYA8LTAZJiwWMMyJMlqUkL6O04sz4h2IyV9yPOzn11yvrnJ/P4rT5JRuA83KECSRuYrBkF14hvEw63GDZvkx7wsdWG9tpYdtiQFg4Zpk03CnTX3LhilZRwjKUjmP9mZlWo7J/gCXZX3Dc0QtrE/srBNTTAbA5QgnRHrbUgJLZ7VekF1A2lNTArftorfpT1cS2N4abN3/qv0pfKyep+naT8wDKbhe3enpnNU5dbAAEmhsSeeTH7aDmeIrBf3bWpNRKFd44IleDpB9LZ4S2V+WcsJYbQNpw8nw+wXuUd3rXb+Idvpvj98UQ8+PJ/vQXey8WsDETmZ+5rQuLXezgfZV0/glTf2G6TOUq8Jsx2ZuFPZ6HCH8ffCE+/jDJQPHOI4BG6JAbWOTR5UsdyTW3DVXY02F8YZLPf9rz+RRl+5esNENuMjPT4tWTpSQ2WEubxKwL8c25ImXlxSNU7OGdrHdD6/OlvERsFPPdpbI6fF+QRo8x3ZJqRERXytzBSPmp/Q/1LVr4GCVHJiHZVMps8U207ZCWJe2NGMaSExXKDF14EVtwy7oe3j4wcPM2q69pHY/uLucI8o1CRo15FtgIiracaXbVdn5eCYID9QKwCzNQ7XttLyIBwddzZHPwbtxlZ1HVgwd8=
-  organization: SG
-  space: WorldWideWeb
-  on:
-    repo: sgframework/sgrb
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
